@@ -1,13 +1,13 @@
 
-name: publish
+name: test
 
 on: push
 
 jobs:
-  publish:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -o init-ssh.sh  https://raw.githubusercontent.com/cc332030/linux/master/script/init-ssh.sh && sh -c "init-ssh.sh "
+      - run: curl -o init-ssh.sh  https://raw.githubusercontent.com/cc332030/linux/master/script/init-ssh.sh && sh init-ssh.sh
       - run: ls -alh ~
       - run: ls -alh ~/.ssh
       - run: ssh -T git@github.com

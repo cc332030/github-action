@@ -7,7 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: curl -o init-ssh.sh https://raw.githubusercontent.com/cc332030/linux/master/script/init-ssh.sh && sudo sh init-ssh.sh
+      - run: curl -o init-ssh.sh https://raw.githubusercontent.com/cc332030/linux/master/script/init-ssh.sh && sudo sh init-ssh.sh $(echo ~)
       - run: whoami && pwd
       - run: ls -alh ~
       - run: ls -alh ~/.ssh

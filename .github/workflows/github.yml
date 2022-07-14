@@ -27,8 +27,6 @@ jobs:
       - run: git config --global user.name "${{ github.actor }}"
       - run: git config --global user.email "${{ github.actor }}@gmail.com"
 
-      - run: git add index.js
-      - run: git commit -m "ncc by Github Action"
-      - run: git push
+      - run: git add index.js && git commit -m "ncc by Github Action" && git push
 
       - uses: cc332030/github-action@node

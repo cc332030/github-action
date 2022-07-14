@@ -6,7 +6,6 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "ts-node src/index.ts",
-    "start": "npm run build && node ./dist/index.js",
     "build": "tsc --build",
     "watch": "nodemon --ext js,ts --exec npm run start",
     "ncc": "npm run build && ncc build -o ."

@@ -1,0 +1,19 @@
+
+name: github
+
+on:
+  push:
+    branches:
+      - "node"
+    tags-ignore:
+      - "*"
+  pull_request:
+    branches:
+      - "node"
+
+jobs:
+  github:
+    name: github
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cc332030/github-action@node

@@ -2,18 +2,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 556:
+/***/ 580:
 /***/ ((__unused_webpack_module, exports) => {
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.StringUtils = void 0;
-class StringUtils {
-    static test() {
-        return 'StringUtils.test';
-    }
+exports.ActionState = void 0;
+class ActionState {
 }
-exports.StringUtils = StringUtils;
+exports.ActionState = ActionState;
+ActionState.isPost = !!process.env['STATE_isPost'];
 
 
 /***/ })
@@ -62,8 +60,8 @@ var __webpack_exports__ = {};
 var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const StringUtils_1 = __nccwpck_require__(556);
-console.log(StringUtils_1.StringUtils.test());
+const action_state_1 = __nccwpck_require__(580);
+console.log(`isPost: ${action_state_1.ActionState.isPost}`);
 
 })();
 

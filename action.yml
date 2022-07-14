@@ -1,0 +1,18 @@
+
+name: 'Github Action'
+
+description: 'Action for Github.'
+
+branding:
+  icon: 'loader'
+  color: 'orange'
+
+inputs:
+  command:
+    description: 'node command.'
+    required: true
+
+runs:
+  using: node16
+  main: dist/index.js
+  post: dist/index.js

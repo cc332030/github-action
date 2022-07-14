@@ -6,6 +6,6 @@
  * @version 1.0
  */
 
-import { StringUtils } from "./util/StringUtils";
+import { ActionState } from "./constants/action-state";
 
-console.log(StringUtils.test())
+console.log(`isPost: ${ActionState.isPost}`)

@@ -4,16 +4,24 @@ name: github
 on:
   push:
     branches:
-      - "node"
-    tags-ignore:
-      - "*"
+      - node
   pull_request:
     branches:
-      - "node"
+      - node
 
 jobs:
   github:
-    name: github
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          key: cache
+          path: |
+            node_modules
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: npm i && npm run ncc
+      - run: git add index.js && git commit -m "ncc by Github Action" && git push
       - uses: cc332030/github-action@node

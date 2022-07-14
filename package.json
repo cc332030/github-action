@@ -20,8 +20,12 @@
     "url": "https://github.com/cc332030/github-action/issues"
   },
   "homepage": "https://github.com/cc332030/github-action#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "@actions/github": "^5.0.3"
+  },
   "devDependencies": {
+    "@types/node": "^18.0.4",
     "@vercel/ncc": "^0.34.0",
     "nodeman": "^1.1.2",
     "rimraf": "^3.0.2",
